@@ -1,7 +1,15 @@
-# Note-integrate-SSO-grafana
-How to integrate SSO with Grafana
+### Table of contents
 
-{{>toc}}
+[1. Create client ID of grafana](#createclient)
+
+[2. Create client secret](#clientsecret)
+
+[3. Get your client secret ](#getsecret)
+
+[4. Add roles for grafana on SSO](#addssoroles)
+
+[5. Add mapper](#addmapper)
+
 # Grafana
 
 Grafana has it owns user management, but to reduce the multiple login times they provide us another way to do that by using Oauth like Keycloak. This post will describe how to configure Grafana to use Keycloak as an authentication provider.
@@ -9,12 +17,15 @@ The grafana documentation explains how to integrate an [OpenID provider]( https:
 
 
 # 1. Create client ID of grafana
- 
+ <a name="createclient"></a>
+
 ![](./grafana/1-create-client.png)
 
 Type your client ID and select `Client Protocol` in here we choose `opened-connect` and my Grafana app running as URL http://127.0.0.1:3000
 
 # 2. Create client secret.
+
+ <a name="clientsecret"></a>
 
 Select your client (you done in step 1) as picture below
  
@@ -23,15 +34,20 @@ Select your client (you done in step 1) as picture below
 Change `Access Type` to `confidential` and add the suitable URL for your app. Then click save.
 
 # 3. Get your client secret 
- 
+<a name="getsecret"></a>
 ![](./grafana/3.getsecret.png)
 
 # 4. Add roles for grafana on SSO
+
+<a name="addssoroles"></a>
  
 ![](./grafana/4-add-roles.png)
+
 You can se more at https://grafana.com/docs/grafana/latest/permissions/organization_roles/
 
 # 5. Add mapper
+
+ <a name="addmapper"></a>
  
 ![](./grafana/5-add mappers.png)
 
