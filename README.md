@@ -88,11 +88,11 @@ GF_AUTH_SIGNOUT_REDIRECT_URL=https://$KEYCLOAK_URL/auth/realms/lbn/protocol/open
 ```
 Test your login when access grafana.
  
-![](6-test-login.png)
+![](./grafana/6-test-login.png)
 
 After login succeesfull we can access to the dashboard.
  
-![](7-login-succeed.png)
+![](./grafana/7-login-succeed.png)
 
 How can we manage the user permission via SSO while grafana provided them in their dashboard?
 
@@ -100,10 +100,10 @@ By default, the user’s role was set as `Viewer`, If you change the permission 
 
 Now I set the account with the `Admin` role in SSO.
  
-![](8-set-role-in Keycloak.png)
+![](./grafana/8-set-role-in Keycloak.png)
 When you login to the grafana dashboard this account will be set the `Admin` permission.
  
-![](9-admin-set-by-sso.png)
+![](./grafana/9-admin-set-by-sso.png)
 
 The rights set on keycloak will be overrided the roles set in the Grafana dashboard. You can change this rule by update ` role_attribute_path` that was defined in garafana config file.
 
