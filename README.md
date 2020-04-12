@@ -128,8 +128,8 @@ So what will happen if you don't set any permission for users in Keycloak?
 
 Now, I remove the role Admin that I set for this user before .
 
-![](11-remove-Admin -roles.png)
+![](./grafana/11-remove-Admin -roles.png)
 
 Login again we can see the role was set for this user is `Viewer`
  
-![](12-Only-have-view-permission.png)
+![](./grafana/12-Only-have-view-permission.png)
