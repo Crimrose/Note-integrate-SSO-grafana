@@ -48,7 +48,7 @@ You can se more at https://grafana.com/docs/grafana/latest/permissions/organizat
 <a name="addmapper"></a>
 # 5. Add mapper
  
-![](./grafana/5-add mappers.png)
+![](./grafana/5-add-mappers.png)
 
 * Choose mapper type is `User Client Role`
 * Set value of Token Claim Name is `roles`
