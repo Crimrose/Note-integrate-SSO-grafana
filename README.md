@@ -43,12 +43,12 @@ Change `Access Type` to `confidential` and add the suitable URL for your app. Th
  
 ![](./grafana/4-add-roles.png)
 
-You can se more at https://grafana.com/docs/grafana/latest/permissions/organization_roles/
+You can see more at https://grafana.com/docs/grafana/latest/permissions/organization_roles/
 
 <a name="addmapper"></a>
 # 5. Add mapper
  
-![](./grafana/5-add mappers.png)
+![](./grafana/5-add-mappers.png)
 
 * Choose mapper type is `User Client Role`
 * Set value of Token Claim Name is `roles`
@@ -85,7 +85,7 @@ role_attribute_path = contains(not_null(roles[*],''), 'Admin') && 'Admin' || con
 [auth.basic]
 enabled = false
 [security]
-dis`able_initial_admin_creation = true
+disable_initial_admin_creation = true
 ```
 
 .env
@@ -115,20 +115,22 @@ By default, the user’s role was set as `Viewer`, If you change the permission 
 
 Now I set the account with the `Admin` role in SSO.
  
-![](./grafana/8-set-role-in Keycloak.png)
+![](./grafana/8-set-role-in-Keycloak.png)
 When you login to the grafana dashboard this account will be set the `Admin` permission.
  
 ![](./grafana/9-admin-set-by-sso.png)
 
-The rights set on keycloak will be overrided the roles set in the Grafana dashboard. You can change this rule by update ` role_attribute_path` that was defined in garafana config file.
+The rights set on keycloak will be overrided the roles set in the Grafana dashboard. You can change this rule by update `role_attribute_path` that was defined in garafana config file.
 
 So what will happen if you don't set any permission for users in Keycloak?
+
+![](./grafana/10-Viewer.png)
 
 -> The user's role will be set base on roles set in Grafana dashboard.
 
 Now, I remove the role Admin that I set for this user before .
 
-![](./grafana/11-remove-Admin -roles.png)
+![](./grafana/11-remove-Admin-roles.png)
 
 Login again we can see the role was set for this user is `Viewer`
  
